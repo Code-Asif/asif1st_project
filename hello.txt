@@ -1,0 +1,29 @@
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+  int main(){
+  int n, nguess=1, guess;
+  srand(time(0));
+  n = rand()%100 + 1;
+  do
+  {
+    cout<<"Guess the number between 1 to 100: ";
+    cin>>guess;
+    if (guess>n)
+    {
+      cout<<"Lower number please"<<endl;
+    }
+    else if (guess<n)
+    {
+      cout<<"Higher number please"<<endl;
+    }
+    else
+    {
+      cout<<"You won the game by trying "<<nguess<<" time"<<endl;
+    }
+    nguess++;
+  } while (guess!=n);
+  
+  return 0;
+}
